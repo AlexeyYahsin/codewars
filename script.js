@@ -72,6 +72,20 @@ function switchItUp(number){
             return 'Zero'
     }
     }
-switchItUp(1)
-switchItUp(3)
-switchItUp(5)
+// switchItUp(1)
+// switchItUp(3)
+// switchItUp(5)
+
+
+function invert(array) {
+    let newArr = array.map(item => {
+       return item > 0 ? item = - item : 
+        item < 0 ? item = item - (item * 2) : -0
+    })
+
+    return newArr
+ }
+console.log(invert([1,2,3,4,5]))
+console.log(invert([1,-2,3,-4,5]))
+invert([])
+invert([0])
