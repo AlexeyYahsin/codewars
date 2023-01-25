@@ -101,6 +101,14 @@ function DNAtoRNA(dna) {
     }
     return rna
   }
-console.log(DNAtoRNA("TTTT"))
-console.log(DNAtoRNA("GCAT"))
-console.log(DNAtoRNA("GACCGCCGCC"))
+// console.log(DNAtoRNA("TTTT"))
+// console.log(DNAtoRNA("GCAT"))
+// console.log(DNAtoRNA("GACCGCCGCC"))
+
+function checkForFactor (base, factor) {
+    return base % factor === 0
+  }
+checkForFactor(10,2)
+checkForFactor(63,7)
+checkForFactor(2450,5)
+checkForFactor(24612,3)
