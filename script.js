@@ -108,7 +108,15 @@ function DNAtoRNA(dna) {
 function checkForFactor (base, factor) {
     return base % factor === 0
   }
-checkForFactor(10,2)
-checkForFactor(63,7)
-checkForFactor(2450,5)
-checkForFactor(24612,3)
+// checkForFactor(10,2)
+// checkForFactor(63,7)
+// checkForFactor(2450,5)
+// checkForFactor(24612,3)
+
+
+function evenOrOdd(number) {
+  return number % 2 == 0 ? 'Even' : 'Odd'
+}
+evenOrOdd(2)
+evenOrOdd(7)
+evenOrOdd(-42)
