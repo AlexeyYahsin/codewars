@@ -195,5 +195,26 @@ function solution(string) {
 
     return newStr.trim()
 }
-console.log(solution('camelCasing'))
-console.log(solution('camelCasingTest'))
+// console.log(solution('camelCasing'))
+// console.log(solution('camelCasingTest'))
+
+
+function cakes(recipe, available) {
+    let amount = {}
+    let result = []
+    for(let key in recipe){
+        amount[key] = available[key] / recipe[key]
+       isFinite(amount[key]) ? amount[key] : amount[key] = 0
+    }
+
+    for(let key in amount){
+        result.push(amount[key])
+    }
+
+    result.sort(function(a, b){ a - b})
+    let rounding = Math.floor(result[0])
+
+    return rounding
+}
+cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}); 
+cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000});
