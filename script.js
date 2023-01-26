@@ -200,21 +200,12 @@ function solution(string) {
 
 
 function cakes(recipe, available) {
-    let amount = {}
-    let result = []
-    for(let key in recipe){
-        amount[key] = available[key] / recipe[key]
-       isFinite(amount[key]) ? amount[key] : amount[key] = 0
-    }
-
-    for(let key in amount){
-        result.push(amount[key])
-    }
-
-    result.sort(function(a, b){ a - b})
-    let rounding = Math.floor(result[0])
-
-    return rounding
+    return Object.keys(recipe).reduce(function (val, ingredient) {
+        return Math.min(
+          Math.floor(available[ingredient] / recipe[ingredient] || 0),
+          val
+        )
+      }, Infinity)
 }
 cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}); 
 cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000});
