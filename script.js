@@ -117,6 +117,50 @@ function checkForFactor (base, factor) {
 function evenOrOdd(number) {
   return number % 2 == 0 ? 'Even' : 'Odd'
 }
-evenOrOdd(2)
-evenOrOdd(7)
-evenOrOdd(-42)
+// evenOrOdd(2)
+// evenOrOdd(7)
+// evenOrOdd(-42)
+
+// function toCamelCase(str){
+//     let arrWords = ''
+//     if(str.indexOf('_')){
+//        arrWords = str.split('_')
+//     }
+//     if(str.indexOf('-')){
+//        arrWords = str.split('-')
+//     }
+//     arrWords.reduse((acc, item, index)=> {
+//         acc += item
+//         console.log(acc);
+//     },'')  
+    
+    
+// }
+// toCamelCase('')
+// toCamelCase("the_stealth_warrior")
+// toCamelCase("The-Stealth-Warrior")
+// toCamelCase("A-B-C")
+
+
+function findOdd(arr) {
+    const obj = {}
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] in obj){
+            ++obj[arr[i]]
+        } else {
+            obj[arr[i]] = 1 
+        }
+    }
+
+    for(let num in obj){
+        if(obj[num] % 2  !== 0){
+            return num      
+        }
+    }
+}
+findOdd([7])
+findOdd([0])
+findOdd([1,1,2])
+findOdd([0,1,0,1,0])
+findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
