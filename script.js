@@ -173,8 +173,27 @@ function findOutlier(integers){
 
     return even.length > odd.length ? odd[0] : even[0]
 }
-findOutlier([0, 1, 2])
+// findOutlier([0, 1, 2])
 // findOutlier([1, 2, 3])
 // findOutlier([2,6,8,10,3])
 // findOutlier([0,0,3,0,0])
 // findOutlier([1,1,0,1,1])
+
+function solution(string) {
+    let newStr = ''
+    let arr = [0]
+
+    for(let i = 0; i < string.length; i++){
+        if(string[i] != string[i].toLowerCase()){
+            arr.push(i)
+        }
+    }
+
+    for(let i = 0; i < arr.length; i++){
+        newStr += string.slice(arr[i], arr[i + 1]) + ' '
+    }
+
+    return newStr.trim()
+}
+console.log(solution('camelCasing'))
+console.log(solution('camelCasingTest'))
