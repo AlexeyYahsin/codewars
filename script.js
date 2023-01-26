@@ -159,8 +159,22 @@ function findOdd(arr) {
         }
     }
 }
-findOdd([7])
-findOdd([0])
-findOdd([1,1,2])
-findOdd([0,1,0,1,0])
-findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
+// findOdd([7])
+// findOdd([0])
+// findOdd([1,1,2])
+// findOdd([0,1,0,1,0])
+// findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
+
+
+
+function findOutlier(integers){
+    let even = integers.filter((item) => item % 2 === 0)
+    let odd = integers.filter((item) => item % 2 !== 0)
+
+    return even.length > odd.length ? odd[0] : even[0]
+}
+findOutlier([0, 1, 2])
+// findOutlier([1, 2, 3])
+// findOutlier([2,6,8,10,3])
+// findOutlier([0,0,3,0,0])
+// findOutlier([1,1,0,1,1])
