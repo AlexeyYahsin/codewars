@@ -219,5 +219,19 @@ function digitalRoot(n) {
     return result > 10 ? digitalRoot(result) : result;
   }
 
-console.log(digitalRoot(16))
-console.log(digitalRoot(456))
+// console.log(digitalRoot(16))
+// console.log(digitalRoot(456))
+
+
+function areYouPlayingBanjo(name) {
+    if(name[0].toLowerCase() === "r"){
+        return name + " plays banjo"
+    } else {
+        return name + " does not play banjo"
+    }
+}
+console.log(areYouPlayingBanjo("Adam"))
+console.log(areYouPlayingBanjo("Paul"))
+console.log(areYouPlayingBanjo("Ringo"))
+console.log(areYouPlayingBanjo("bravo"))
+console.log(areYouPlayingBanjo("rolf"))
