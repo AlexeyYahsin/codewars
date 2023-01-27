@@ -230,8 +230,20 @@ function areYouPlayingBanjo(name) {
         return name + " does not play banjo"
     }
 }
-console.log(areYouPlayingBanjo("Adam"))
-console.log(areYouPlayingBanjo("Paul"))
-console.log(areYouPlayingBanjo("Ringo"))
-console.log(areYouPlayingBanjo("bravo"))
-console.log(areYouPlayingBanjo("rolf"))
+// console.log(areYouPlayingBanjo("Adam"))
+// console.log(areYouPlayingBanjo("Paul"))
+// console.log(areYouPlayingBanjo("Ringo"))
+// console.log(areYouPlayingBanjo("bravo"))
+// console.log(areYouPlayingBanjo("rolf"))
+
+
+function removeSmallest(numbers) {
+   const copy = numbers.slice(0)
+   let smallestValue = numbers.indexOf(Math.min(...numbers))
+   copy.splice(smallestValue, 1);
+   return copy
+}
+removeSmallest([1, 2, 3, 4, 5])
+removeSmallest([5, 3, 2, 1, 4])
+removeSmallest([2, 2, 1, 2, 1])
+removeSmallest([])
