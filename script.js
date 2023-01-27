@@ -257,6 +257,25 @@ function grow(x){
         return acc * num
     })
 }
-console.log(grow([1, 2, 3]))
-console.log(grow([4, 1, 1, 1, 4]))
-console.log(grow([2, 2, 2, 2, 2, 2]))
+// console.log(grow([1, 2, 3]))
+// console.log(grow([4, 1, 1, 1, 4]))
+// console.log(grow([2, 2, 2, 2, 2, 2]))
+
+
+function countSmileys(arr) {
+    const smileys = [':)', ':D', ':-)', ':~)', ':-D', ':~D', ';)', ';D', ';-)', ';~)', ';-D', ';~D'];
+    let count = 0;
+    
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < smileys.length; j++) {
+        if (arr[i] === smileys[j]) {
+          count++;
+        }
+      }
+    }
+    return count;
+}
+countSmileys([])
+countSmileys([':D',':~)',';~D',':)'])
+countSmileys([':)',':(',':D',':O',':;'])
+countSmileys([';]', ':[', ';*', ':$', ';-D'])
