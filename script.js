@@ -243,7 +243,20 @@ function removeSmallest(numbers) {
    copy.splice(smallestValue, 1);
    return copy
 }
-removeSmallest([1, 2, 3, 4, 5])
-removeSmallest([5, 3, 2, 1, 4])
-removeSmallest([2, 2, 1, 2, 1])
-removeSmallest([])
+// removeSmallest([1, 2, 3, 4, 5])
+// removeSmallest([5, 3, 2, 1, 4])
+// removeSmallest([2, 2, 1, 2, 1])
+// removeSmallest([])
+
+
+function grow(x){
+   return x.reduce((acc, num, index) => {
+        if(index === 0){
+            acc += num
+        }
+        return acc * num
+    })
+}
+console.log(grow([1, 2, 3]))
+console.log(grow([4, 1, 1, 1, 4]))
+console.log(grow([2, 2, 2, 2, 2, 2]))
