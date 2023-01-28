@@ -305,7 +305,35 @@ function duplicateEncode(word){
       return letterCount[letter] === 1 ? '(' : ')';
     }).join('');
 }
-duplicateEncode("din")
-duplicateEncode("recede")
-duplicateEncode("Success")
-duplicateEncode("(( @")
+// duplicateEncode("din")
+// duplicateEncode("recede")
+// duplicateEncode("Success")
+// duplicateEncode("(( @")
+
+
+function DNAStrand(dna){
+    let sequence = {
+     "A": "T",
+     "T": "A",
+     "G": "C",
+     "C": "G"
+   }
+   return dna.replace(/A|T|G|C/g, function(matched){
+     return sequence[matched];
+   });
+ }
+//  DNAStrand("AAAA")
+//  DNAStrand("ATTGC")
+//  DNAStrand("GTAT")
+
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+      return Math.min(...args)
+    }
+}
+let sif = new SmallestIntegerFinder()
+// console.log(sif.findSmallestInt([78,56,232,12,8]))
+// console.log(sif.findSmallestInt([78,56,232,12,18]))
+// console.log(sif.findSmallestInt([78,56,232,412,228]))
+// console.log(sif.findSmallestInt([78,56,232,12,0]))
+// console.log(sif.findSmallestInt([1,56,232,12,8]))
