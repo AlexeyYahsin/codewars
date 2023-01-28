@@ -337,3 +337,19 @@ let sif = new SmallestIntegerFinder()
 // console.log(sif.findSmallestInt([78,56,232,412,228]))
 // console.log(sif.findSmallestInt([78,56,232,12,0]))
 // console.log(sif.findSmallestInt([1,56,232,12,8]))
+
+
+function findShort(s){
+  let length = 500
+  const arr= s.split(' ')
+  arr.forEach(item => {
+    if(item.length < length){
+        length = item.length
+    }
+  })
+
+  return length
+}
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+console.log(findShort("turns out random test cases are easier than writing out basic ones"))
+console.log(findShort("Let's travel abroad shall we"))
