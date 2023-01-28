@@ -284,9 +284,28 @@ function findUniq(arr) {
     arr.sort((a,b)=>a-b);
     return arr[0]==arr[1]?arr.pop():arr[0]
   }
-findUniq([ 1, 0, 0 ])
-findUniq([ 0, 1, 0 ])
-findUniq([ 0, 0, 1 ])
-findUniq([ 1, 1, 1, 2, 1, 1 ])
-findUniq([ 1, 1, 2, 1, 1 ])
-findUniq([ 3, 10, 3, 3, 3 ])
+// findUniq([ 1, 0, 0 ])
+// findUniq([ 0, 1, 0 ])
+// findUniq([ 0, 0, 1 ])
+// findUniq([ 1, 1, 1, 2, 1, 1 ])
+// findUniq([ 1, 1, 2, 1, 1 ])
+// findUniq([ 3, 10, 3, 3, 3 ])
+
+
+
+function duplicateEncode(word){
+    let letterCount = {};
+    let letters = word.toLowerCase().split('');
+  
+    letters.forEach(function(letter) {
+      letterCount[letter] = (letterCount[letter] || 0) + 1;
+    });
+  
+    return letters.map(function(letter) {
+      return letterCount[letter] === 1 ? '(' : ')';
+    }).join('');
+}
+duplicateEncode("din")
+duplicateEncode("recede")
+duplicateEncode("Success")
+duplicateEncode("(( @")
