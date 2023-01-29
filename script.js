@@ -433,7 +433,16 @@ function basicOp(operation, value1, value2){
     }
     return result
 }
-basicOp('+', 4, 7)
-basicOp('-', 15, 18)
-basicOp('*', 5, 5)
-basicOp('/', 49, 7)
+// basicOp('+', 4, 7)
+// basicOp('-', 15, 18)
+// basicOp('*', 5, 5)
+// basicOp('/', 49, 7)
+
+
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+      return length * width * height
+    }
+}
+Kata.getVolumeOfCuboid(1,2,2)
+Kata.getVolumeOfCuboid(6,2,5)
