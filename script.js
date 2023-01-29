@@ -386,18 +386,30 @@ function oddOrEven(array) {
         return 'odd'
     }
 }
-oddOrEven([0])
-oddOrEven([1])
-oddOrEven([])
-oddOrEven([0, 1, 5])
-oddOrEven([0, 1, 3])
-oddOrEven([1023, 1, 2])
-oddOrEven([0, -1, -5])
-oddOrEven([0, -1, -3])
-oddOrEven([-1023, 1, -2])
-oddOrEven([0, 1, 2])
-oddOrEven([0, 1, 4])
-oddOrEven([1023, 1, 3])
-oddOrEven([0, -1, 2])
-oddOrEven([0, 1, -4])
-oddOrEven([-1023, -1, 3])
+// oddOrEven([0])
+// oddOrEven([1])
+// oddOrEven([])
+// oddOrEven([0, 1, 5])
+// oddOrEven([0, 1, 3])
+// oddOrEven([1023, 1, 2])
+// oddOrEven([0, -1, -5])
+// oddOrEven([0, -1, -3])
+// oddOrEven([-1023, 1, -2])
+// oddOrEven([0, 1, 2])
+// oddOrEven([0, 1, 4])
+// oddOrEven([1023, 1, 3])
+// oddOrEven([0, -1, 2])
+// oddOrEven([0, 1, -4])
+// oddOrEven([-1023, -1, 3])
+
+
+String.prototype.toJadenCase = function () {
+    let arr = this.split(' ')
+    for(let i = 0; i < arr.length; i++){
+        arr[i] = arr[i].slice(0, 1).toUpperCase() + arr[i].slice(1)
+    } 
+    let result = arr.join(' ')
+    return(result);
+}
+var str = "How can mirrors be real if our eyes aren't real"
+str.toJadenCase()
