@@ -373,7 +373,31 @@ function removeChar(str){
 function check(a, x) {
    return a.includes(x)
 }
-console.log(check([66, 101], 66))
-console.log(check([101, 45, 75, 105, 99, 107], 107))
-console.log(check(['t', 'e', 's', 't'], 'e'))
-console.log(check(['what', 'a', 'great', 'kata'], 'kat'))
+// console.log(check([66, 101], 66))
+// console.log(check([101, 45, 75, 105, 99, 107], 107))
+// console.log(check(['t', 'e', 's', 't'], 'e'))
+// console.log(check(['what', 'a', 'great', 'kata'], 'kat'))
+
+function oddOrEven(array) {
+    let sum = array.reduce((acc, value) => acc + value, 0)
+    if(sum % 2 === 0){
+        return 'even'
+    } else {
+        return 'odd'
+    }
+}
+oddOrEven([0])
+oddOrEven([1])
+oddOrEven([])
+oddOrEven([0, 1, 5])
+oddOrEven([0, 1, 3])
+oddOrEven([1023, 1, 2])
+oddOrEven([0, -1, -5])
+oddOrEven([0, -1, -3])
+oddOrEven([-1023, 1, -2])
+oddOrEven([0, 1, 2])
+oddOrEven([0, 1, 4])
+oddOrEven([1023, 1, 3])
+oddOrEven([0, -1, 2])
+oddOrEven([0, 1, -4])
+oddOrEven([-1023, -1, 3])
