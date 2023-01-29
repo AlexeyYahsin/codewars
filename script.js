@@ -355,6 +355,17 @@ function findShort(s){
 // console.log(findShort("Let's travel abroad shall we"))
 
 
-doubleInteger = (i) => i * 2
+const doubleInteger = (i) => i * 2
 
 // doubleInteger(2)
+
+
+
+function removeChar(str){
+   return str = str.slice(1, str.length - 1)
+};
+// removeChar('eloquent')
+// removeChar('country')
+// removeChar('person')
+// removeChar('place')
+// removeChar('ooopsss')   
