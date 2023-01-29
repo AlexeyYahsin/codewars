@@ -412,4 +412,28 @@ String.prototype.toJadenCase = function () {
     return(result);
 }
 var str = "How can mirrors be real if our eyes aren't real"
-str.toJadenCase()
+// str.toJadenCase()
+
+
+function basicOp(operation, value1, value2){
+    let result
+     switch(operation){
+        case'-':
+        result = value1 - value2
+        break
+        case'+':
+        result = value1 + value2
+        break
+        case'*':
+        result = value1 * value2
+        break
+        case'/':
+        result = value1 / value2
+        break
+    }
+    return result
+}
+basicOp('+', 4, 7)
+basicOp('-', 15, 18)
+basicOp('*', 5, 5)
+basicOp('/', 49, 7)
