@@ -444,5 +444,13 @@ class Kata {
       return length * width * height
     }
 }
-Kata.getVolumeOfCuboid(1,2,2)
-Kata.getVolumeOfCuboid(6,2,5)
+// Kata.getVolumeOfCuboid(1,2,2)
+// Kata.getVolumeOfCuboid(6,2,5)
+
+
+function squareSum(numbers){
+    return numbers.reduce((acc, num)=> acc += Math.pow(num, 2), 0)
+}
+squareSum([1,2])
+squareSum([0, 3, 4, 5])
+squareSum([])
