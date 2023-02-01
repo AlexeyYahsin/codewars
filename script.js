@@ -484,3 +484,10 @@ const binaryArrayToNumber = arr => {
 // binaryArrayToNumber([0,0,1,0])
 // binaryArrayToNumber([1,1,1,1])
 // binaryArrayToNumber([0,1,1,0])
+
+
+function makeNegative(num) {
+    return num > 0 ? num = -num : num === 0 ? 0 : num
+}
+
+makeNegative(42)
