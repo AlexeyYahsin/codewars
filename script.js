@@ -537,5 +537,22 @@ function count (string) {
     }
     return obj;
 }
-console.log(count("aba"))
-console.log(count(""))
+// console.log(count("aba"))
+// console.log(count(""))
+
+
+function abbrevName(name){
+    return name.split(' ').reduce((acc, val) =>{
+        if(acc === ''){
+            acc += val[0].toUpperCase() + '.'
+        }else {
+            acc += val[0].toUpperCase()
+        }
+        return acc
+    },'')
+}
+console.log(abbrevName("Sam Harris"))
+// abbrevName("Patrick Feenan")
+// abbrevName("Evan Cole")
+// abbrevName("P Favuzzi")
+// abbrevName("David Mendieta")
