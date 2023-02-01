@@ -525,3 +525,17 @@ function wave(str){
 // wave("")
 // wave("two words")
 // wave(" gap ")
+
+
+
+function count (string) {  
+    const temp = string.split('')
+    let obj = {}
+
+    for(let i = 0; i < temp.length; i++){
+        obj[temp[i]] ? obj[temp[i]] += 1 : obj[temp[i]] = 1
+    }
+    return obj;
+}
+console.log(count("aba"))
+console.log(count(""))
