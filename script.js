@@ -498,8 +498,30 @@ function sumTwoSmallestNumbers(numbers) {
     })
     return numbers[0] + numbers[1]
 }  
-console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]))
-console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
-console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7]))
-console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]))
-console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]))
+// console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]))
+// console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
+// console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7]))
+// console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]))
+// console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]))
+
+
+function wave(str){
+    let result = []
+    const strToArr = str.split('')
+    
+    for(let i = 0; i < strToArr.length; i++){
+       if(strToArr[i] === ' '){
+        continue
+       }
+       strToArr[i] = strToArr[i].toUpperCase() 
+       let word = strToArr.join('')
+       strToArr[i] = strToArr[i].toLowerCase() 
+       result.push(word)
+    }
+    return result
+}
+// wave("hello")
+// wave("codewars")
+// wave("")
+// wave("two words")
+// wave(" gap ")
