@@ -561,5 +561,19 @@ function abbrevName(name){
 function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
    return [...arguments].reduce((acc, val) =>acc += val)
 }
-goals(0,0,0)
-goals(43, 10, 5)
+// goals(0,0,0)
+// goals(43, 10, 5)
+
+
+function doubleChar(str) {
+    const arrToStr = str.split('')
+    return arrToStr.reduce((acc, val) => {
+        return acc += val + val
+    }, '')
+}
+doubleChar("abcd")
+doubleChar("Adidas")
+doubleChar("1337")
+doubleChar("illuminati")
+doubleChar("123456")
+doubleChar("%^&*(")
