@@ -583,6 +583,27 @@ function stray(numbers) {
     const sort = numbers.sort((a, b) => a - b)
     return sort[0] === sort[1] ? sort[sort.length - 1] : sort[0]
 }
-stray([1, 1, 2])
-stray([1, 2, 1])
-stray([2, 1, 1])
+// stray([1, 1, 2])
+// stray([1, 2, 1])
+// stray([2, 1, 1])
+
+
+function getCount(str) {
+    let result = 0
+    for(let i = 0; i < str.length; i++) {
+        switch (str[i]) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                result += 1
+                break;
+        
+            default:
+                break;
+        }
+    }
+    return result
+}
+console.log(getCount("abracadabra"))
