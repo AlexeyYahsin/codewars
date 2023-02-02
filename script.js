@@ -571,9 +571,18 @@ function doubleChar(str) {
         return acc += val + val
     }, '')
 }
-doubleChar("abcd")
-doubleChar("Adidas")
-doubleChar("1337")
-doubleChar("illuminati")
-doubleChar("123456")
-doubleChar("%^&*(")
+// doubleChar("abcd")
+// doubleChar("Adidas")
+// doubleChar("1337")
+// doubleChar("illuminati")
+// doubleChar("123456")
+// doubleChar("%^&*(")
+
+
+function stray(numbers) {
+    const sort = numbers.sort((a, b) => a - b)
+    return sort[0] === sort[1] ? sort[sort.length - 1] : sort[0]
+}
+stray([1, 1, 2])
+stray([1, 2, 1])
+stray([2, 1, 1])
