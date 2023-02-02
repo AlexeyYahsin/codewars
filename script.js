@@ -606,4 +606,19 @@ function getCount(str) {
     }
     return result
 }
-console.log(getCount("abracadabra"))
+// console.log(getCount("abracadabra"))
+
+
+function correct(string){
+    const corrections = {
+        "5": "S",
+        "0": "O",
+        "1": "I",
+      };
+      return string.replace(/[501]/g, (char) => corrections[char]);
+}
+correct("L0ND0N")
+correct("DUBL1N")
+correct("51NGAP0RE")
+correct("BUDAPE5T")
+correct("PAR15")
