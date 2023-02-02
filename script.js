@@ -551,8 +551,15 @@ function abbrevName(name){
         return acc
     },'')
 }
-console.log(abbrevName("Sam Harris"))
+// console.log(abbrevName("Sam Harris"))
 // abbrevName("Patrick Feenan")
 // abbrevName("Evan Cole")
 // abbrevName("P Favuzzi")
 // abbrevName("David Mendieta")
+
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+   return [...arguments].reduce((acc, val) =>acc += val)
+}
+goals(0,0,0)
+goals(43, 10, 5)
