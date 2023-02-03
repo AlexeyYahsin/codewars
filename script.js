@@ -617,8 +617,27 @@ function correct(string){
       };
       return string.replace(/[501]/g, (char) => corrections[char]);
 }
-correct("L0ND0N")
-correct("DUBL1N")
-correct("51NGAP0RE")
-correct("BUDAPE5T")
-correct("PAR15")
+// correct("L0ND0N")
+// correct("DUBL1N")
+// correct("51NGAP0RE")
+// correct("BUDAPE5T")
+// correct("PAR15")
+
+function isPalindrome(x) {
+    x = x.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
+    const lastIndex = x.length - 1;
+    for (let i = 0; i < x.length / 2; i++) {
+        if (x[i] !== x[lastIndex - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+// isPalindrome("a")
+// isPalindrome("aba")
+// isPalindrome("Abba")
+// isPalindrome("hello")
+// isPalindrome("Bob")
+// isPalindrome("Madam")
+// isPalindrome("AbBa")
+// isPalindrome("")
