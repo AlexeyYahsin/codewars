@@ -675,5 +675,12 @@ function sumStr(a,b) {
     }
   return (+a + +b).toString()
 }
-console.log(sumStr("",""))
-console.log(sumStr("34","5"))
+// console.log(sumStr("",""))
+// console.log(sumStr("34","5"))
+
+
+
+function getAge(inputString){
+    return parseInt(inputString)
+}
+// getAge("4 years old")
