@@ -663,3 +663,17 @@ function twoSum(numbers, target) {
     }
   }
 }
+
+
+
+function sumStr(a,b) {
+    if(a === ''){
+        a = 0
+    }
+    if(b === ''){
+        b = 0
+    }
+  return (+a + +b).toString()
+}
+console.log(sumStr("",""))
+console.log(sumStr("34","5"))
