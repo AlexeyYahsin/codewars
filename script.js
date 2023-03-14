@@ -684,3 +684,36 @@ function getAge(inputString){
     return parseInt(inputString)
 }
 // getAge("4 years old")
+
+
+
+
+function testEven(n) {
+    if(n % 2 === 0) return true
+    else return false
+}
+// console.log(testEven(0))
+// console.log(testEven(0.5))
+// console.log(testEven(1))
+// console.log(testEven(2))
+// console.log(testEven(-4))
+
+
+function filter_list(l) {
+  return l.filter((str) => typeof str != "string" && str >= 0);
+}
+  
+
+// console.log(filter_list([1,2,'a','b']) )
+// console.log(filter_list([1,'a','b',0,15]) )
+// console.log(filter_list([1,2,'aasf','1','123',123]) )
+// console.log(filter_list([666, 846, 866, "7=e", 184, 785, "", "369", 172, "2I", "s2[", 235]) )
+
+
+
+
+function smash (words) {
+    return words.join(" ");
+ }
+
+console.log( smash(['hello', 'world', 'this', 'is', 'great']))
